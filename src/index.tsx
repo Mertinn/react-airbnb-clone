@@ -11,11 +11,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
   }
-
-  body {
-    background: #3b3939;
-    min-height: 150vh;
-  }
 `;
 
 ReactDOM.render(

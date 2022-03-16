@@ -1,8 +1,23 @@
 import styled from "styled-components";
 
-export const DefaultPaddingContainer = styled.div`
-  padding: 1rem 1.5rem 1rem 1.5rem;
+export const DefaultPaddingContainer = styled.div<{
+  paddingRight?: boolean;
+  paddingTop?: boolean;
+  paddingLeft?: boolean;
+  paddingBottom?: boolean;
+}>`
+  padding: ${(props) => (props.paddingTop ? "1rem" : "0")}
+    ${(props) => (props.paddingRight ? "1.5rem" : "0")}
+    ${(props) => (props.paddingBottom ? "1rem" : "0")}
+    ${(props) => (props.paddingLeft ? "1.5rem" : "0")};
 `;
+
+DefaultPaddingContainer.defaultProps = {
+  paddingTop: true,
+  paddingRight: true,
+  paddingLeft: true,
+  paddingBottom: true,
+};
 
 export const TransparentButton = styled.button<{
   baseColor: string;
@@ -48,4 +63,11 @@ export const ClassicButton = styled.button`
   border: none;
   outline: none;
   font-weight: bold;
+`;
+
+export const SectionHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
 `;

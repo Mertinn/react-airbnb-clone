@@ -4,6 +4,7 @@ import {
   ColorBackground,
   DefaultPaddingContainer,
   HalfColorBackground,
+  SectionHeader,
   TransparentButton,
 } from "../../components/globalStyles";
 import Navbar from "../../components/Navbar";
@@ -11,8 +12,43 @@ import ExploreCard from "../../components/ExploreCard";
 import v from "../../components/variables";
 import { CardAbsoluteText, CardCenteredContainer } from "./styles";
 import CabinPhoto from "../../assets/forestCabin.webp";
+import TownCardImage from "../../assets/townCardImage.webp";
+import SwipeCard from "../../components/SwipeCard";
+import SwipeCardsList from "../../components/SwipeCardsList";
 
 const Home = () => {
+  const swipeCards = [
+    <SwipeCard
+      backgroundColor={"rgb(204, 45, 74);"}
+      image={TownCardImage}
+      content={
+        <>
+          <h2>Gdańsk</h2>
+          <p>140 kilometrów stąd</p>
+        </>
+      }
+    />,
+    <SwipeCard
+      backgroundColor={"rgb(204, 45, 74);"}
+      image={TownCardImage}
+      content={
+        <>
+          <h2>Gdańsk</h2>
+          <p>140 kilometrów stąd</p>
+        </>
+      }
+    />,
+    <SwipeCard
+      backgroundColor={"rgb(204, 45, 74);"}
+      image={TownCardImage}
+      content={
+        <>
+          <h2>Gdańsk</h2>
+          <p>140 kilometrów stąd</p>
+        </>
+      }
+    />,
+  ];
   return (
     <>
       <ColorBackground>
@@ -46,6 +82,15 @@ const Home = () => {
           </ExploreCard>
         </DefaultPaddingContainer>
       </HalfColorBackground>
+
+      <DefaultPaddingContainer>
+        <SectionHeader>
+          <h2>Pomysł na Twoją kolejną podróż</h2>
+        </SectionHeader>
+      </DefaultPaddingContainer>
+      <DefaultPaddingContainer paddingRight={false}>
+        <SwipeCardsList swipeCards={swipeCards} />
+      </DefaultPaddingContainer>
     </>
   );
 };
