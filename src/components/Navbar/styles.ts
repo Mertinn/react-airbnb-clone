@@ -6,6 +6,7 @@ export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
   top: 0;
   transition: background 0.5s;
   ${(props) => props.isScrolled && "background: white"};
+  z-index: 999;
 `;
 
 export const SearchbarContainer = styled.div`
