@@ -4,6 +4,7 @@ import {
   ColorBackground,
   DefaultPaddingContainer,
   HalfColorBackground,
+  MinimalisticButton,
   SectionHeader,
   TransparentButton,
 } from "../../components/globalStyles";
@@ -18,6 +19,7 @@ import VillageCardImage from "../../assets/villageImage.webp";
 import CastleCardImage from "../../assets/castleImage.webp";
 import SwipeCard from "../../components/SwipeCard";
 import SwipeCardsList from "../../components/SwipeCardsList";
+import CavePhoto from "../../assets/caveImage.webp";
 
 const Home = () => {
   const swipeCards = [
@@ -66,6 +68,7 @@ const Home = () => {
     <>
       <ColorBackground>
         <Navbar />
+
         <DefaultPaddingContainer>
           <ExploreCard fill={v.primaryRed}>
             <CardCenteredContainer>
@@ -88,7 +91,11 @@ const Home = () => {
         <DefaultPaddingContainer>
           <ExploreCard>
             <img src={CabinPhoto} alt="Cabin in a forest" />
-            <CardAbsoluteText>
+            <CardAbsoluteText
+              textAlign={"center"}
+              alignItems={"center"}
+              justifyContent={"end"}
+            >
               <h1>Zarezerwuj, jak poprowadzi Cię&nbsp;ciekawość</h1>
               <ClassicButton>Elastyczne wyszukiwanie</ClassicButton>
             </CardAbsoluteText>
@@ -103,6 +110,27 @@ const Home = () => {
       </DefaultPaddingContainer>
       <DefaultPaddingContainer paddingRight={false}>
         <SwipeCardsList swipeCards={swipeCards} />
+      </DefaultPaddingContainer>
+
+      <DefaultPaddingContainer>
+        <SectionHeader>
+          <h2>Odkryj atrakcje Airbnb</h2>
+        </SectionHeader>
+      </DefaultPaddingContainer>
+
+      <DefaultPaddingContainer>
+        <ExploreCard>
+          <img src={CavePhoto} alt="Cabin in a forest" />
+          <CardAbsoluteText
+            textAlign={"left"}
+            alignItems={"start"}
+            justifyContent={"start"}
+            fontSize={"1.2em"}
+          >
+            <h1>Sposoby spędzania czasu w&nbsp;trakcie podróży</h1>
+            <MinimalisticButton>Atrakcje</MinimalisticButton>
+          </CardAbsoluteText>
+        </ExploreCard>
       </DefaultPaddingContainer>
     </>
   );

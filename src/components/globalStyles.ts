@@ -71,3 +71,14 @@ export const SectionHeader = styled.div`
   justify-content: space-between;
   gap: 1em;
 `;
+
+export const MinimalisticButton = styled.button`
+  background: white;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  font-weight: bold;
+  padding: 0.9em 1.4em;
+  font-size: 1.1em;
+`;

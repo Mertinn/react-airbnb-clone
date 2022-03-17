@@ -9,15 +9,23 @@ export const CardCenteredContainer = styled.div`
   padding: 10em 0;
 `;
 
-export const CardAbsoluteText = styled.div`
+export const CardAbsoluteText = styled.div<{
+  justifyContent: string;
+  alignItems: string;
+  textAlign: string;
+  fontSize?: string;
+}>`
   position: absolute;
   width: 100%;
-  top: 10%;
-  bottom: 10%;
+  height: 100%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  text-align: center;
-  align-items: center;
+  font-size: ${(props) => props.fontSize};
+  justify-content: ${(props) => props.justifyContent};
+  text-align: ${(props) => props.textAlign};
+  align-items: ${(props) => props.alignItems};
   gap: 2em;
 `;
+
+CardAbsoluteText.defaultProps = { fontSize: "1em" };
