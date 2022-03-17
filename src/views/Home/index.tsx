@@ -13,6 +13,9 @@ import v from "../../components/variables";
 import { CardAbsoluteText, CardCenteredContainer } from "./styles";
 import CabinPhoto from "../../assets/forestCabin.webp";
 import TownCardImage from "../../assets/townCardImage.webp";
+import CityCardImage from "../../assets/cityImage.webp";
+import VillageCardImage from "../../assets/villageImage.webp";
+import CastleCardImage from "../../assets/castleImage.webp";
 import SwipeCard from "../../components/SwipeCard";
 import SwipeCardsList from "../../components/SwipeCardsList";
 
@@ -30,7 +33,7 @@ const Home = () => {
     />,
     <SwipeCard
       backgroundColor={"rgb(204, 45, 74)"}
-      image={TownCardImage}
+      image={CityCardImage}
       content={
         <>
           <h2>Warszawa</h2>
@@ -40,7 +43,7 @@ const Home = () => {
     />,
     <SwipeCard
       backgroundColor={"rgb(217, 59, 48)"}
-      image={TownCardImage}
+      image={CastleCardImage}
       content={
         <>
           <h2>Kraków</h2>
@@ -50,7 +53,7 @@ const Home = () => {
     />,
     <SwipeCard
       backgroundColor={"rgb(188, 26, 110)"}
-      image={TownCardImage}
+      image={VillageCardImage}
       content={
         <>
           <h2>Katowice</h2>
