@@ -5,12 +5,15 @@ export const SwipeCardContainer = styled.div<{ backgroundColor: string }>`
   background: ${(props) => props.backgroundColor};
   color: white;
   overflow: hidden;
-  max-width: 50vw;
+  width: 50vw;
+  img {
+    width: 100%;
+  }
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  padding: 1em 1em 6em;
+  padding: 1em 1em 7em;
 `;

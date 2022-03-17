@@ -19,7 +19,7 @@ import SwipeCardsList from "../../components/SwipeCardsList";
 const Home = () => {
   const swipeCards = [
     <SwipeCard
-      backgroundColor={"rgb(204, 45, 74);"}
+      backgroundColor={"rgb(204, 45, 74)"}
       image={TownCardImage}
       content={
         <>
@@ -29,22 +29,32 @@ const Home = () => {
       }
     />,
     <SwipeCard
-      backgroundColor={"rgb(204, 45, 74);"}
+      backgroundColor={"rgb(204, 45, 74)"}
       image={TownCardImage}
       content={
         <>
-          <h2>Gdańsk</h2>
-          <p>140 kilometrów stąd</p>
+          <h2>Warszawa</h2>
+          <p>227 kilometrów stąd</p>
         </>
       }
     />,
     <SwipeCard
-      backgroundColor={"rgb(204, 45, 74);"}
+      backgroundColor={"rgb(217, 59, 48)"}
       image={TownCardImage}
       content={
         <>
-          <h2>Gdańsk</h2>
-          <p>140 kilometrów stąd</p>
+          <h2>Kraków</h2>
+          <p>368 kilometrów stąd</p>
+        </>
+      }
+    />,
+    <SwipeCard
+      backgroundColor={"rgb(188, 26, 110)"}
+      image={TownCardImage}
+      content={
+        <>
+          <h2>Katowice</h2>
+          <p>328 kilometrów stąd</p>
         </>
       }
     />,

@@ -1,5 +1,4 @@
 import React from "react";
-import { DefaultPaddingContainer } from "../globalStyles";
 import { CardsList } from "./styles";
 
 interface IProps {
@@ -9,10 +8,10 @@ interface IProps {
 const SwipeCardsList = ({ swipeCards }: IProps) => {
   return (
     <CardsList>
-      {swipeCards.map((card) => (
-        <li>{card}</li>
+      {swipeCards.map((card, index) => (
+        <li key={index}>{card}</li>
       ))}
-      <DefaultPaddingContainer paddingLeft={false} />
+      <li />
     </CardsList>
   );
 };
