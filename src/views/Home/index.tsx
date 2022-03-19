@@ -26,6 +26,7 @@ import {
   CardAbsoluteText,
   CardCenteredContainer,
 } from "../../components/ExploreCard/styles";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const swipeCards = [
@@ -152,6 +153,7 @@ const Home = () => {
             alignItems={"start"}
             justifyContent={"start"}
             fontSize={"1.2em"}
+            bottomPadding={"25em"}
           >
             <h1>Sposoby spędzania czasu w&nbsp;domu</h1>
             <MinimalisticButton>Atrakcje online</MinimalisticButton>
@@ -166,11 +168,14 @@ const Home = () => {
           alignItems={"start"}
           justifyContent={"space-between"}
           fontSize={"1.2em"}
+          gap={"20em"}
         >
           <BiggerHeader>Masz pytania na temat przyjmowania gości?</BiggerHeader>
           <MinimalisticButton>Zapytaj superhosta</MinimalisticButton>
         </CardAbsoluteText>
       </ExploreCard>
+
+      <Footer />
     </>
   );
 };
