@@ -5,11 +5,21 @@ interface IProps {
   fill?: string;
   image?: string;
   children: React.ReactNode;
+  roundedCorners?: boolean;
 }
 
-const ExploreCard = ({ image, fill, children }: IProps) => {
+const ExploreCard = ({
+  image,
+  fill,
+  children,
+  roundedCorners = true,
+}: IProps) => {
   return (
-    <ExploreCardContainer fill={fill} image={image}>
+    <ExploreCardContainer
+      fill={fill}
+      image={image}
+      roundedCorners={roundedCorners}
+    >
       {children}
     </ExploreCardContainer>
   );

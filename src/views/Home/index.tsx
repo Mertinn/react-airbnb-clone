@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  BiggerHeader,
   ClassicButton,
   ColorBackground,
   DefaultPaddingContainer,
@@ -11,7 +12,6 @@ import {
 import Navbar from "../../components/Navbar";
 import ExploreCard from "../../components/ExploreCard";
 import v from "../../components/variables";
-import { CardAbsoluteText, CardCenteredContainer } from "./styles";
 import CabinPhoto from "../../assets/forestCabin.webp";
 import TownCardImage from "../../assets/townCardImage.webp";
 import CityCardImage from "../../assets/cityImage.webp";
@@ -20,6 +20,12 @@ import CastleCardImage from "../../assets/castleImage.webp";
 import SwipeCard from "../../components/SwipeCard";
 import SwipeCardsList from "../../components/SwipeCardsList";
 import CavePhoto from "../../assets/caveImage.webp";
+import IndonesianWomenPhoto from "../../assets/indonesianWomen.webp";
+import WomenOnAField from "../../assets/womenOnAField.jpg";
+import {
+  CardAbsoluteText,
+  CardCenteredContainer,
+} from "../../components/ExploreCard/styles";
 
 const Home = () => {
   const swipeCards = [
@@ -66,9 +72,9 @@ const Home = () => {
   ];
   return (
     <>
-      <ColorBackground>
-        <Navbar />
+      <Navbar />
 
+      <ColorBackground>
         <DefaultPaddingContainer>
           <ExploreCard fill={v.primaryRed}>
             <CardCenteredContainer>
@@ -95,6 +101,7 @@ const Home = () => {
               textAlign={"center"}
               alignItems={"center"}
               justifyContent={"end"}
+              topPadding={"39em"}
             >
               <h1>Zarezerwuj, jak poprowadzi Cię&nbsp;ciekawość</h1>
               <ClassicButton>Elastyczne wyszukiwanie</ClassicButton>
@@ -126,12 +133,44 @@ const Home = () => {
             alignItems={"start"}
             justifyContent={"start"}
             fontSize={"1.2em"}
+            bottomPadding={"25em"}
           >
             <h1>Sposoby spędzania czasu w&nbsp;trakcie podróży</h1>
             <MinimalisticButton>Atrakcje</MinimalisticButton>
           </CardAbsoluteText>
         </ExploreCard>
       </DefaultPaddingContainer>
+
+      <DefaultPaddingContainer>
+        <ExploreCard>
+          <img
+            src={IndonesianWomenPhoto}
+            alt="Indonesian women holding a fabric"
+          />
+          <CardAbsoluteText
+            textAlign={"left"}
+            alignItems={"start"}
+            justifyContent={"start"}
+            fontSize={"1.2em"}
+          >
+            <h1>Sposoby spędzania czasu w&nbsp;domu</h1>
+            <MinimalisticButton>Atrakcje online</MinimalisticButton>
+          </CardAbsoluteText>
+        </ExploreCard>
+      </DefaultPaddingContainer>
+
+      <ExploreCard roundedCorners={false}>
+        <img src={WomenOnAField} alt={"Women on a field"} />
+        <CardAbsoluteText
+          textAlign={"left"}
+          alignItems={"start"}
+          justifyContent={"space-between"}
+          fontSize={"1.2em"}
+        >
+          <BiggerHeader>Masz pytania na temat przyjmowania gości?</BiggerHeader>
+          <MinimalisticButton>Zapytaj superhosta</MinimalisticButton>
+        </CardAbsoluteText>
+      </ExploreCard>
     </>
   );
 };

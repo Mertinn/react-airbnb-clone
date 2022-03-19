@@ -5,7 +5,7 @@ export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
   position: sticky;
   top: 0;
   transition: background 0.5s;
-  ${(props) => props.isScrolled && "background: white"};
+  ${(props) => (props.isScrolled ? "background: white" : "background: black")};
   z-index: 999;
 `;
 

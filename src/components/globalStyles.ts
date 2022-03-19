@@ -82,3 +82,7 @@ export const MinimalisticButton = styled.button`
   padding: 0.9em 1.4em;
   font-size: 1.1em;
 `;
+
+export const BiggerHeader = styled.h1`
+  font-size: 2.5em;
+`;
