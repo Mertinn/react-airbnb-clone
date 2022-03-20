@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import v from "./variables";
 
 export const DefaultPaddingContainer = styled.div<{
   paddingRight?: boolean;
@@ -10,6 +11,13 @@ export const DefaultPaddingContainer = styled.div<{
     ${(props) => (props.paddingRight ? "1.5rem" : "0")}
     ${(props) => (props.paddingBottom ? "1rem" : "0")}
     ${(props) => (props.paddingLeft ? "1.5rem" : "0")};
+
+  @media (min-width: ${v.desktopWidth}) {
+    padding: ${(props) => (props.paddingTop ? "1rem" : "0")}
+      ${(props) => (props.paddingRight ? "2.5rem" : "0")}
+      ${(props) => (props.paddingBottom ? "1rem" : "0")}
+      ${(props) => (props.paddingLeft ? "2.5rem" : "0")};
+  }
 `;
 
 DefaultPaddingContainer.defaultProps = {
@@ -58,7 +66,7 @@ export const ClassicButton = styled.button`
   padding: 1em 1.5em;
   background: white;
   color: #c6017e;
-  font-size: 1.1em;
+  font-size: 1em;
   border-radius: 2em;
   border: none;
   outline: none;
@@ -80,7 +88,7 @@ export const MinimalisticButton = styled.button`
   border-radius: 0.5em;
   font-weight: bold;
   padding: 0.9em 1.4em;
-  font-size: 1.1em;
+  font-size: 0.9em;
 `;
 
 export const BiggerHeader = styled.h1`

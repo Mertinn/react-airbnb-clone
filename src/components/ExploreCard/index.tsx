@@ -3,23 +3,13 @@ import { ExploreCardContainer } from "./styles";
 
 interface IProps {
   fill?: string;
-  image?: string;
   children: React.ReactNode;
   roundedCorners?: boolean;
 }
 
-const ExploreCard = ({
-  image,
-  fill,
-  children,
-  roundedCorners = true,
-}: IProps) => {
+const ExploreCard = ({ fill, children, roundedCorners = true }: IProps) => {
   return (
-    <ExploreCardContainer
-      fill={fill}
-      image={image}
-      roundedCorners={roundedCorners}
-    >
+    <ExploreCardContainer fill={fill} roundedCorners={roundedCorners}>
       {children}
     </ExploreCardContainer>
   );
