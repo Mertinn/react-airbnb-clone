@@ -55,7 +55,7 @@ CardAbsoluteText.defaultProps = {
 export const SmallCard = styled.div`
   height: 70vw;
   @media (min-width: ${v.desktopWidth}) {
-    height: calc(35vw * 0.9);
+    height: 29.57vw;
   }
 `;
 

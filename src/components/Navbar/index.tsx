@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { DefaultPaddingContainer } from "../globalStyles";
-import { NavbarContainer, SearchbarContainer } from "./styles";
+import { DesktopMenu, NavbarContainer, SearchbarContainer } from "./styles";
 import { BiSearch } from "react-icons/bi";
+import { ReactComponent as AirbnbLogo } from "../../assets/airbnbLogo.svg";
+import { ReactComponent as ProfileIcon } from "../../assets/profileIcon.svg";
+import ExtendedSearchbar from "../ExtendedSearchbar";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +32,13 @@ const Navbar = () => {
             <BiSearch size={"1.3em"} /> Dokąd chcesz pojechać?
           </button>
         </SearchbarContainer>
+
+        <DesktopMenu>
+          <AirbnbLogo />
+          <ExtendedSearchbar />
+          <p>Zostań gospodarzem</p>
+          <ProfileIcon />
+        </DesktopMenu>
       </DefaultPaddingContainer>
     </NavbarContainer>
   );
