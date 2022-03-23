@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { DefaultPaddingContainer } from "../globalStyles";
-import { DesktopMenu, NavbarContainer, SearchbarContainer } from "./styles";
+import {
+  AirbnbLogoStyled,
+  BottomSpacer,
+  DesktopMenu,
+  NavbarContainer,
+  SearchbarContainer,
+} from "./styles";
 import { BiSearch } from "react-icons/bi";
-import { ReactComponent as AirbnbLogo } from "../../assets/airbnbLogo.svg";
 import { ReactComponent as ProfileIcon } from "../../assets/profileIcon.svg";
 import ExtendedSearchbar from "../ExtendedSearchbar";
 
@@ -25,22 +30,25 @@ const Navbar = () => {
   }, []);
 
   return (
-    <NavbarContainer isScrolled={isScrolled}>
-      <DefaultPaddingContainer>
-        <SearchbarContainer>
-          <button>
-            <BiSearch size={"1.3em"} /> Dokąd chcesz pojechać?
-          </button>
-        </SearchbarContainer>
+    <>
+      <NavbarContainer isScrolled={isScrolled}>
+        <DefaultPaddingContainer>
+          <SearchbarContainer>
+            <button>
+              <BiSearch size={"1.3em"} /> Dokąd chcesz pojechać?
+            </button>
+          </SearchbarContainer>
 
-        <DesktopMenu>
-          <AirbnbLogo />
-          <ExtendedSearchbar />
-          <p>Zostań gospodarzem</p>
-          <ProfileIcon />
-        </DesktopMenu>
-      </DefaultPaddingContainer>
-    </NavbarContainer>
+          <DesktopMenu>
+            <AirbnbLogoStyled />
+            <ExtendedSearchbar isExtended={!isScrolled} />
+            <p>Zostań gospodarzem</p>
+            <ProfileIcon />
+          </DesktopMenu>
+        </DefaultPaddingContainer>
+      </NavbarContainer>
+      <BottomSpacer />
+    </>
   );
 };
 

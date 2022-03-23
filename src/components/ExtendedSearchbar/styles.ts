@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import v from "../variables";
 
-export const SearchbarContainer = styled.div`
+export const SearchbarContainer = styled.div<{ isShown: boolean }>`
   background: none;
   border: 1px solid #dedede;
   display: flex;
@@ -9,6 +9,55 @@ export const SearchbarContainer = styled.div`
   padding: 0.5em;
   gap: 4em;
   border-radius: 2em;
+  opacity: 1;
+  transition: opacity 0.2s;
+  ${(props) =>
+    !props.isShown &&
+    css`
+      opacity: 0;
+    `};
+`;
+
+export const SearchbarAnimation = keyframes`
+  from {
+    top: 0;
+    transform: translateX(-30%) scaleX(0);
+    opacity: 0;
+  }
+  to {
+    top: 100%;
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
+`;
+export const SearchbarAnimationBack = keyframes`
+  from {
+    top: 100%;
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
+  to {
+     top: 0;
+     transform: translateX(-30%) scaleX(0);
+     opacity: 0;
+   }
+`;
+
+export const ExtendedContainer = styled.div<{ isShown: boolean }>`
+  position: absolute;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  ${(props) =>
+    props.isShown
+      ? css`
+          animation: ${v.navbarAnimationDuration} ${SearchbarAnimation} forwards;
+        `
+      : css`
+          animation: ${v.navbarAnimationDuration} ${SearchbarAnimationBack}
+            forwards;
+        `}
 `;
 
 export const SearchLabel = styled.button`
@@ -30,4 +79,9 @@ export const SearchButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const HeaderLinks = styled.div`
+  display: flex;
+  gap: 2em;
 `;
