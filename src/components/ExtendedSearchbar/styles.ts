@@ -11,6 +11,7 @@ export const SearchbarContainer = styled.div<{ isShown: boolean }>`
   border-radius: 2em;
   opacity: 1;
   transition: opacity 0.2s;
+
   ${(props) =>
     !props.isShown &&
     css`
@@ -46,9 +47,11 @@ export const SearchbarAnimationBack = keyframes`
 export const ExtendedContainer = styled.div<{ isShown: boolean }>`
   position: absolute;
   color: white;
-  width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   ${(props) =>
     props.isShown
       ? css`
@@ -84,4 +87,10 @@ export const SearchButton = styled.button`
 export const HeaderLinks = styled.div`
   display: flex;
   gap: 2em;
+`;
+
+export const GapContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 `;

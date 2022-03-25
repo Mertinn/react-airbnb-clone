@@ -1,6 +1,7 @@
 import React from "react";
 import {
   ExtendedContainer,
+  GapContainer,
   HeaderLinks,
   SearchbarContainer,
   SearchButton,
@@ -8,6 +9,7 @@ import {
 } from "./styles";
 import { BiSearch } from "react-icons/bi";
 import { DefaultPaddingContainer } from "../globalStyles";
+import AdvancedInput from "../AdvancedInput";
 
 const ExtendedSearchbar = ({ isExtended }: { isExtended: boolean }) => {
   return (
@@ -21,11 +23,14 @@ const ExtendedSearchbar = ({ isExtended }: { isExtended: boolean }) => {
 
       <ExtendedContainer isShown={isExtended}>
         <DefaultPaddingContainer>
-          <HeaderLinks>
-            <p>Miejsca na pobyt</p>
-            <p>Atrakcje</p>
-            <p>Atrakcje online</p>
-          </HeaderLinks>
+          <GapContainer>
+            <HeaderLinks>
+              <p>Miejsca na pobyt</p>
+              <p>Atrakcje</p>
+              <p>Atrakcje online</p>
+            </HeaderLinks>
+            <AdvancedInput />
+          </GapContainer>
         </DefaultPaddingContainer>
       </ExtendedContainer>
     </>
