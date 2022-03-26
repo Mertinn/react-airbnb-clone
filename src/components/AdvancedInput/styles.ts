@@ -7,7 +7,6 @@ export const InputContainer = styled.div`
   border-radius: 3em;
   width: 100%;
   display: flex;
-  flex: 1 1 0;
   justify-content: space-between;
 `;
 

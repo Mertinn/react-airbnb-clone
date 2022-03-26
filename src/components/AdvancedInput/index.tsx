@@ -10,19 +10,11 @@ const AdvancedInput = () => {
         type={"text"}
         placeholder={"Dokąd chcesz pojechać?"}
       />
-      <Line />
-      <InputCell
-        title={"Lokalizacja"}
-        type={"text"}
-        placeholder={"Dodaj daty"}
-      />
-      <Line />
-      <InputCell
-        title={"Lokalizacja"}
-        type={"text"}
-        placeholder={"Dodaj daty"}
-      />
-      <Line />
+
+      <InputCell title={"Przyjazd"} type={"text"} placeholder={"Dodaj daty"} />
+
+      <InputCell title={"Wyjazd"} type={"text"} placeholder={"Dodaj daty"} />
+
       <InputCell title={"Goście"} type={"text"} placeholder={"Dodaj gości"} />
     </InputContainer>
   );
