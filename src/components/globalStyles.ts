@@ -7,6 +7,7 @@ export const DefaultPaddingContainer = styled.div<{
   paddingLeft?: boolean;
   paddingBottom?: boolean;
 }>`
+  width: 100%;
   padding: ${(props) => (props.paddingTop ? "1rem" : "0")}
     ${(props) => (props.paddingRight ? "1.5rem" : "0")}
     ${(props) => (props.paddingBottom ? "1rem" : "0")}

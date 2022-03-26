@@ -10,3 +10,7 @@ export const InputCellContainer = styled.div`
 export const CellHeader = styled.p`
   font-weight: bold;
 `;
+
+export const CellPlaceholder = styled.p`
+  color: #717171;
+`;

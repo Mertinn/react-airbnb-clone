@@ -22,7 +22,7 @@ const ExtendedSearchbar = ({ isExtended }: { isExtended: boolean }) => {
       </SearchbarContainer>
 
       <ExtendedContainer isShown={isExtended}>
-        <DefaultPaddingContainer>
+        <DefaultPaddingContainer paddingRight={false} paddingLeft={false}>
           <GapContainer>
             <HeaderLinks>
               <p>Miejsca na pobyt</p>

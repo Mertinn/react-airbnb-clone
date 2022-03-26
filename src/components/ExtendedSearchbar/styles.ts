@@ -10,12 +10,13 @@ export const SearchbarContainer = styled.div<{ isShown: boolean }>`
   gap: 4em;
   border-radius: 2em;
   opacity: 1;
-  transition: opacity 0.2s;
+  transition: ${v.navbarAnimationDuration};
 
   ${(props) =>
     !props.isShown &&
     css`
       opacity: 0;
+      transform: translateY(50%);
     `};
 `;
 
@@ -92,5 +93,6 @@ export const HeaderLinks = styled.div`
 export const GapContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.5em;
+  align-items: center;
 `;
