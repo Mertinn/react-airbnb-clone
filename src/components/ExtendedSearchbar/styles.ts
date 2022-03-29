@@ -23,24 +23,24 @@ export const SearchbarContainer = styled.div<{ isShown: boolean }>`
 export const SearchbarAnimation = keyframes`
   from {
     top: 0;
-    transform: translateX(-30%) scaleX(0);
+    transform: translateX(-30%) scaleX(0) translateY(-50%);
     opacity: 0;
   }
   to {
     top: 100%;
-    transform: translateX(0) scaleX(1);
+    transform: translateX(0) scaleX(1) translateY(0);
     opacity: 1;
   }
 `;
 export const SearchbarAnimationBack = keyframes`
   from {
     top: 100%;
-    transform: translateX(0) scaleX(1);
+    transform: translateX(0) scaleX(1) translateY(0);
     opacity: 1;
   }
   to {
      top: 0;
-     transform: translateX(-30%) scaleX(0);
+     transform: translateX(-30%) scaleX(0) translateY(-50%);
      opacity: 0;
    }
 `;
@@ -70,19 +70,6 @@ export const SearchLabel = styled.button`
   border: none;
   margin-left: 1em;
   font-weight: bold;
-`;
-
-export const SearchButton = styled.button`
-  border-radius: 50%;
-  background: ${v.primaryRed};
-  border: none;
-  outline: none;
-  color: white;
-  width: 2.5em;
-  height: 2.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const HeaderLinks = styled.div`

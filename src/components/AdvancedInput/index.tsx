@@ -1,6 +1,7 @@
 import React from "react";
 import InputCell from "./InputCell";
 import { InputContainer, Line } from "./styles";
+import SearchButton from "../SearchButton";
 
 const AdvancedInput = () => {
   return (
@@ -15,7 +16,12 @@ const AdvancedInput = () => {
 
       <InputCell title={"Wyjazd"} type={"text"} placeholder={"Dodaj daty"} />
 
-      <InputCell title={"Goście"} type={"text"} placeholder={"Dodaj gości"} />
+      <InputCell
+        title={"Goście"}
+        type={"text"}
+        placeholder={"Dodaj gości"}
+        isLast={true}
+      />
     </InputContainer>
   );
 };
