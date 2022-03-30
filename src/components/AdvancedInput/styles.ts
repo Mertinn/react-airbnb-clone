@@ -9,10 +9,3 @@ export const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
-export const Line = styled.div`
-  align-self: center;
-  height: 80%;
-  width: 1px;
-  background: #bbbbbb;
-`;

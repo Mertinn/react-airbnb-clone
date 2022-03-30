@@ -14,6 +14,7 @@ export const DesktopMenu = styled.div`
   color: white;
   transition: ${v.navbarAnimationDuration};
   position: relative;
+  gap: 3em;
   @media (max-width: calc(${v.desktopWidth} - 1px)) {
     display: none;
   }
@@ -26,6 +27,8 @@ export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
   ${(props) => (props.isScrolled ? "background: white" : "background: black")};
   z-index: 999;
   width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+
   ${DesktopMenu} {
     ${(props) =>
       props.isScrolled &&
@@ -33,6 +36,7 @@ export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
         color: black;
       `}
   }
+
   ${AirbnbLogoStyled} {
     ${(props) =>
       props.isScrolled &&
@@ -67,9 +71,18 @@ export const SearchbarContainer = styled.div`
 
 export const BottomSpacer = styled.div`
   display: block;
-  padding: 4em;
+  padding: 5em;
   background: black;
   @media (max-width: calc(${v.desktopWidth} - 1px)) {
     display: none;
   }
+  @media (min-width: ${v.navbarMoveWidth}) {
+    padding: 3.5em;
+  }
+`;
+
+export const NavbarSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1em;
 `;

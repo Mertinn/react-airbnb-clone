@@ -5,6 +5,7 @@ import {
   BottomSpacer,
   DesktopMenu,
   NavbarContainer,
+  NavbarSection,
   SearchbarContainer,
 } from "./styles";
 import { BiSearch } from "react-icons/bi";
@@ -42,8 +43,10 @@ const Navbar = () => {
           <DesktopMenu>
             <AirbnbLogoStyled />
             <ExtendedSearchbar isExtended={!isScrolled} />
-            <p>Zostań gospodarzem</p>
-            <ProfileIcon />
+            <NavbarSection>
+              <p>Zostań gospodarzem</p>
+              <ProfileIcon />
+            </NavbarSection>
           </DesktopMenu>
         </DefaultPaddingContainer>
       </NavbarContainer>

@@ -1,7 +1,6 @@
 import React from "react";
 import InputCell from "./InputCell";
-import { InputContainer, Line } from "./styles";
-import SearchButton from "../SearchButton";
+import { InputContainer } from "./styles";
 
 const AdvancedInput = () => {
   return (

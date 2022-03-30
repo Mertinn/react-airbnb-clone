@@ -11,6 +11,7 @@ export const SearchbarContainer = styled.div<{ isShown: boolean }>`
   border-radius: 2em;
   opacity: 1;
   transition: ${v.navbarAnimationDuration};
+  margin-right: auto;
 
   ${(props) =>
     !props.isShown &&
@@ -18,6 +19,11 @@ export const SearchbarContainer = styled.div<{ isShown: boolean }>`
       opacity: 0;
       transform: translateY(50%);
     `};
+
+  @media (min-width: ${v.navbarMoveWidth}) {
+    margin-left: auto;
+    margin-right: 0;
+  }
 `;
 
 export const SearchbarAnimation = keyframes`
@@ -61,7 +67,12 @@ export const ExtendedContainer = styled.div<{ isShown: boolean }>`
       : css`
           animation: ${v.navbarAnimationDuration} ${SearchbarAnimationBack}
             forwards;
-        `}
+        `};
+
+  @media (min-width: ${v.navbarMoveWidth}) {
+    top: 0 !important;
+    gap: 1em;
+  }
 `;
 
 export const SearchLabel = styled.button`
@@ -80,6 +91,6 @@ export const HeaderLinks = styled.div`
 export const GapContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 3em;
   align-items: center;
 `;
