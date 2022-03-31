@@ -18,6 +18,12 @@ export const DesktopMenu = styled.div`
   @media (max-width: calc(${v.desktopWidth} - 1px)) {
     display: none;
   }
+
+  @media (min-width: ${v.navbarMoveWidth}) {
+    & > * {
+      flex: 1 1 0;
+    }
+  }
 `;
 
 export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
@@ -85,4 +91,7 @@ export const NavbarSection = styled.div`
   display: flex;
   align-items: center;
   gap: 1em;
+  @media (min-width: ${v.navbarMoveWidth}) {
+    justify-content: end;
+  }
 `;

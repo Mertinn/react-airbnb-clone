@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import v from "../variables";
 
 export const InputContainer = styled.div`
   font-size: 0.9em;
@@ -8,4 +9,8 @@ export const InputContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: ${v.navbarMoveWidth}) {
+    width: 80%;
+  }
 `;
