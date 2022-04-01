@@ -6,12 +6,14 @@ export const SearchbarContainer = styled.div<{ isShown: boolean }>`
   border: 1px solid #dedede;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0.5em;
   gap: 4em;
   border-radius: 2em;
   opacity: 1;
   transition: ${v.navbarAnimationDuration};
   margin-right: auto;
+  max-width: 400px;
 
   ${(props) =>
     !props.isShown &&
