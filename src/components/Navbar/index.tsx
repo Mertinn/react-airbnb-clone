@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { DefaultPaddingContainer } from "../globalStyles";
 import {
-  AirbnbLogoStyled,
   BottomSpacer,
   DesktopMenu,
+  LogoContainer,
   NavbarContainer,
   NavbarSection,
   SearchbarContainer,
@@ -11,6 +11,7 @@ import {
 import { BiSearch } from "react-icons/bi";
 import { ReactComponent as ProfileIcon } from "../../assets/profileIcon.svg";
 import ExtendedSearchbar from "../ExtendedSearchbar";
+import { ReactComponent as AirbnbLogo } from "../../assets/airbnbLogo.svg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +42,10 @@ const Navbar = () => {
           </SearchbarContainer>
 
           <DesktopMenu>
-            <AirbnbLogoStyled />
+            <LogoContainer>
+              <AirbnbLogo />
+              <p>airbnb</p>
+            </LogoContainer>
             <ExtendedSearchbar isExtended={!isScrolled} />
             <NavbarSection>
               <p>Zostań gospodarzem</p>

@@ -19,6 +19,13 @@ export const DefaultPaddingContainer = styled.div<{
       ${(props) => (props.paddingBottom ? "1rem" : "0")}
       ${(props) => (props.paddingLeft ? "2.5rem" : "0")};
   }
+
+  @media (min-width: ${v.desktopExpandWith}) {
+    padding: ${(props) => (props.paddingTop ? "1rem" : "0")}
+      ${(props) => (props.paddingRight ? "5rem" : "0")}
+      ${(props) => (props.paddingBottom ? "1rem" : "0")}
+      ${(props) => (props.paddingLeft ? "5rem" : "0")};
+  }
 `;
 
 DefaultPaddingContainer.defaultProps = {

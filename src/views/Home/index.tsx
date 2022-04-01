@@ -22,11 +22,7 @@ import SwipeCardsList from "../../components/SwipeCardsList";
 import CavePhoto from "../../assets/caveImage.webp";
 import IndonesianWomenPhoto from "../../assets/indonesianWomen.webp";
 import WomenOnAField from "../../assets/womenOnAField.jpg";
-import {
-  CardAbsoluteText,
-  LargeCard,
-  SmallCard,
-} from "../../components/ExploreCard/styles";
+import { CardAbsoluteText } from "../../components/ExploreCard/styles";
 import Footer from "../../components/Footer";
 import BigCabinPhoto from "../../assets/forestCabinBigger.webp";
 import { CardsGrid } from "./styles";
@@ -81,53 +77,49 @@ const Home = () => {
       <section>
         <ColorBackground>
           <DefaultPaddingContainer>
-            <SmallCard>
-              <ExploreCard fill={v.primaryRed}>
-                <CardAbsoluteText
-                  alignItems={"center"}
-                  textAlign={"center"}
-                  justifyContent={"center"}
-                  fontSize={"1.3em"}
+            <ExploreCard fill={v.primaryRed} cardSize={"smallCard"}>
+              <CardAbsoluteText
+                alignItems={"center"}
+                textAlign={"center"}
+                justifyContent={"center"}
+                fontSize={"1.3em"}
+              >
+                <h1>
+                  Pomóż w&nbsp;zakwaterowaniu 100&nbsp;000&nbsp;uchodźców
+                  z&nbsp;Ukrainy
+                </h1>
+                <TransparentButton
+                  transparentColor={v.primaryRed}
+                  baseColor={"white"}
                 >
-                  <h1>
-                    Pomóż w&nbsp;zakwaterowaniu 100&nbsp;000&nbsp;uchodźców
-                    z&nbsp;Ukrainy
-                  </h1>
-                  <TransparentButton
-                    transparentColor={v.primaryRed}
-                    baseColor={"white"}
-                  >
-                    Dowiedz się więcej
-                  </TransparentButton>
-                </CardAbsoluteText>
-              </ExploreCard>
-            </SmallCard>
+                  Dowiedz się więcej
+                </TransparentButton>
+              </CardAbsoluteText>
+            </ExploreCard>
           </DefaultPaddingContainer>
         </ColorBackground>
 
         <HalfColorBackground topColor={"black"} bottomColor={"white"}>
           <DefaultPaddingContainer>
-            <LargeCard>
-              <ExploreCard>
-                <picture>
-                  <source
-                    media={`(min-width: ${v.desktopWidth})`}
-                    srcSet={BigCabinPhoto}
-                  />
-                  <img src={CabinPhoto} alt="Cabin in a forest" />
-                </picture>
+            <ExploreCard cardSize={"largeCard"}>
+              <picture>
+                <source
+                  media={`(min-width: ${v.desktopWidth})`}
+                  srcSet={BigCabinPhoto}
+                />
+                <img src={CabinPhoto} alt="Cabin in a forest" />
+              </picture>
 
-                <CardAbsoluteText
-                  textAlign={"center"}
-                  alignItems={"center"}
-                  justifyContent={"end"}
-                  fontSize={"1.2em"}
-                >
-                  <h1>Zarezerwuj, jak poprowadzi Cię&nbsp;ciekawość</h1>
-                  <ClassicButton>Elastyczne wyszukiwanie</ClassicButton>
-                </CardAbsoluteText>
-              </ExploreCard>
-            </LargeCard>
+              <CardAbsoluteText
+                textAlign={"center"}
+                alignItems={"center"}
+                justifyContent={"end"}
+                fontSize={"1.2em"}
+              >
+                <h1>Zarezerwuj, jak poprowadzi Cię&nbsp;ciekawość</h1>
+                <ClassicButton>Elastyczne wyszukiwanie</ClassicButton>
+              </CardAbsoluteText>
+            </ExploreCard>
           </DefaultPaddingContainer>
         </HalfColorBackground>
       </section>
@@ -152,59 +144,53 @@ const Home = () => {
 
         <DefaultPaddingContainer>
           <CardsGrid>
-            <LargeCard>
-              <ExploreCard>
-                <img src={CavePhoto} alt="Family in a cave" />
-                <CardAbsoluteText
-                  textAlign={"left"}
-                  alignItems={"start"}
-                  justifyContent={"start"}
-                  fontSize={"1.5em"}
-                >
-                  <h1>Sposoby spędzania czasu w&nbsp;trakcie podróży</h1>
-                  <MinimalisticButton>Atrakcje</MinimalisticButton>
-                </CardAbsoluteText>
-              </ExploreCard>
-            </LargeCard>
+            <ExploreCard cardSize={"largeCard"}>
+              <img src={CavePhoto} alt="Family in a cave" />
+              <CardAbsoluteText
+                textAlign={"left"}
+                alignItems={"start"}
+                justifyContent={"start"}
+                fontSize={"1.5em"}
+              >
+                <h1>Sposoby spędzania czasu w&nbsp;trakcie podróży</h1>
+                <MinimalisticButton>Atrakcje</MinimalisticButton>
+              </CardAbsoluteText>
+            </ExploreCard>
 
-            <LargeCard>
-              <ExploreCard>
-                <img
-                  src={IndonesianWomenPhoto}
-                  alt="Indonesian women holding a fabric"
-                />
-                <CardAbsoluteText
-                  textAlign={"left"}
-                  alignItems={"start"}
-                  justifyContent={"start"}
-                  fontSize={"1.5em"}
-                >
-                  <h1>Sposoby spędzania czasu w&nbsp;domu</h1>
-                  <MinimalisticButton>Atrakcje online</MinimalisticButton>
-                </CardAbsoluteText>
-              </ExploreCard>
-            </LargeCard>
+            <ExploreCard cardSize={"largeCard"}>
+              <img
+                src={IndonesianWomenPhoto}
+                alt="Indonesian women holding a fabric"
+              />
+              <CardAbsoluteText
+                textAlign={"left"}
+                alignItems={"start"}
+                justifyContent={"start"}
+                fontSize={"1.5em"}
+              >
+                <h1>Sposoby spędzania czasu w&nbsp;domu</h1>
+                <MinimalisticButton>Atrakcje online</MinimalisticButton>
+              </CardAbsoluteText>
+            </ExploreCard>
           </CardsGrid>
         </DefaultPaddingContainer>
       </section>
 
       <section>
         <DefaultPaddingContainer paddingRight={false} paddingLeft={false}>
-          <ExploreCard roundedCorners={false}>
-            <LargeCard>
-              <img src={WomenOnAField} alt={"Women on a field"} />
-              <CardAbsoluteText
-                textAlign={"left"}
-                alignItems={"start"}
-                justifyContent={"space-between"}
-                fontSize={"1.3em"}
-              >
-                <BiggerHeader>
-                  Masz pytania na temat przyjmowania gości?
-                </BiggerHeader>
-                <MinimalisticButton>Zapytaj superhosta</MinimalisticButton>
-              </CardAbsoluteText>
-            </LargeCard>
+          <ExploreCard roundedCorners={false} cardSize={"largeCard"}>
+            <img src={WomenOnAField} alt={"Women on a field"} />
+            <CardAbsoluteText
+              textAlign={"left"}
+              alignItems={"start"}
+              justifyContent={"space-between"}
+              fontSize={"1.3em"}
+            >
+              <BiggerHeader>
+                Masz pytania na temat przyjmowania gości?
+              </BiggerHeader>
+              <MinimalisticButton>Zapytaj superhosta</MinimalisticButton>
+            </CardAbsoluteText>
           </ExploreCard>
         </DefaultPaddingContainer>
       </section>

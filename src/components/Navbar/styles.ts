@@ -1,10 +1,22 @@
 import styled, { css } from "styled-components";
 import v from "../variables";
-import { ReactComponent as AirbnbLogo } from "../../assets/airbnbLogo.svg";
 
-export const AirbnbLogoStyled = styled(AirbnbLogo)`
-  color: white;
-  transition: ${v.navbarAnimationDuration};
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.35em;
+  gap: 0.5em;
+
+  p {
+    display: none;
+  }
+
+  @media (min-width: 1130px) {
+    p {
+      display: flex;
+    }
+  }
 `;
 
 export const DesktopMenu = styled.div`
@@ -43,12 +55,21 @@ export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
       `}
   }
 
-  ${AirbnbLogoStyled} {
+  ${LogoContainer} {
+    &,
+    svg {
+      ${(props) =>
+        props.isScrolled &&
+        css`
+          color: ${v.primaryRed};
+        `}
+    }
+  }
+
+  ${LogoContainer} {
     ${(props) =>
-      props.isScrolled &&
-      css`
-        color: ${v.primaryRed};
-      `}
+      props.isScrolled ? `color: ${v.primaryRed}` : "color: white;"};
+    transition: ${v.navbarAnimationDuration};
   }
 `;
 

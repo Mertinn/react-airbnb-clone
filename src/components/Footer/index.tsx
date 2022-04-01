@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
+  BottomSection,
   FooterContainer,
   FooterSections,
   InlineLinks,
@@ -27,6 +28,12 @@ const Footer = () => {
             <li>
               <Link to={"#"}>Zgłoś problem</Link>
             </li>
+            <li>
+              <Link to={"#"}>Wsparcie dla osób z niepełnosprawnościami</Link>
+            </li>
+            <li>
+              <Link to={"#"}>Zgłoś problem dotyczący Twojej okolicy</Link>
+            </li>
           </LinksList>
         </li>
         <li>
@@ -34,9 +41,6 @@ const Footer = () => {
           <LinksList>
             <li>
               <Link to={"#"}>Zacznij przyjmować gości</Link>
-            </li>
-            <li>
-              <Link to={"#"}>AirCover: ochrona dla gospodarzy</Link>
             </li>
             <li>
               <Link to={"#"}>Odwiedź forum społeczności</Link>
@@ -63,9 +67,8 @@ const Footer = () => {
             </li>
           </LinksList>
         </li>
-        <li>
+        <BottomSection>
           <p>© 2022 Airbnb, Inc.</p>
-
           <InlineLinks>
             <Link to={"#"}>Prywatność</Link>
             <span>·</span>
@@ -75,7 +78,7 @@ const Footer = () => {
             <span>·</span>
             <Link to={"#"}>Informacje o firmie</Link>
           </InlineLinks>
-        </li>
+        </BottomSection>
       </FooterSections>
     </FooterContainer>
   );

@@ -1,9 +1,27 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import v from "../variables";
+
+const CardSizes = {
+  smallCard: css`
+    height: 70vw;
+    @media (min-width: ${v.desktopWidth}) {
+      height: 42vh;
+    }
+  `,
+  largeCard: css`
+    height: 135vw;
+    @media (min-width: ${v.desktopWidth}) {
+      height: 75vh;
+    }
+  `,
+};
+
+export type CardsSizesTypes = keyof typeof CardSizes;
 
 export const ExploreCardContainer = styled.div<{
   fill?: string;
   roundedCorners?: boolean;
+  cardType: CardsSizesTypes;
 }>`
   ${(props) => props.fill && "background:" + props.fill};
   color: white;
@@ -19,6 +37,7 @@ export const ExploreCardContainer = styled.div<{
     position: absolute;
     object-fit: cover;
   }
+  ${(props) => CardSizes[props.cardType]}
 `;
 
 ExploreCardContainer.defaultProps = { roundedCorners: true };
@@ -51,18 +70,3 @@ CardAbsoluteText.defaultProps = {
   fontSize: "1em",
   gap: "2em",
 };
-
-export const SmallCard = styled.div`
-  height: 70vw;
-  @media (min-width: ${v.desktopWidth}) {
-    height: 29.57vw;
-  }
-`;
-
-export const LargeCard = styled.div`
-  height: 135vw;
-
-  @media (min-width: ${v.desktopWidth}) {
-    height: 75vw;
-  }
-`;
