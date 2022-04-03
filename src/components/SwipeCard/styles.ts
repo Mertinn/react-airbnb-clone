@@ -1,13 +1,25 @@
 import styled from "styled-components";
+import v from "../variables";
 
 export const SwipeCardContainer = styled.div<{ backgroundColor: string }>`
   border-radius: 1em;
   background: ${(props) => props.backgroundColor};
   color: white;
   overflow: hidden;
-  width: 50vw;
+  height: 75vw;
+  min-width: 55vw;
   img {
     width: 100%;
+  }
+  @media (min-width: ${v.desktopWidth}) {
+    height: 45vw;
+    min-width: 35vw;
+  }
+
+  @media (min-width: ${v.navbarMoveWidth}) {
+    width: auto;
+    height: 30vw;
+    min-width: 0;
   }
 `;
 

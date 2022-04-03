@@ -22,6 +22,7 @@ import SwipeCardsList from "../../components/SwipeCardsList";
 import CavePhoto from "../../assets/caveImage.webp";
 import IndonesianWomenPhoto from "../../assets/indonesianWomen.webp";
 import WomenOnAField from "../../assets/womenOnAField.jpg";
+import WomenOnAFieldBigger from "../../assets/womenOnAFieldBigger.webp";
 import { CardAbsoluteText } from "../../components/ExploreCard/styles";
 import Footer from "../../components/Footer";
 import BigCabinPhoto from "../../assets/forestCabinBigger.webp";
@@ -177,9 +178,19 @@ const Home = () => {
       </section>
 
       <section>
-        <DefaultPaddingContainer paddingRight={false} paddingLeft={false}>
+        <DefaultPaddingContainer
+          paddingRight={false}
+          paddingLeft={false}
+          paddingBottom={false}
+        >
           <ExploreCard roundedCorners={false} cardSize={"largeCard"}>
-            <img src={WomenOnAField} alt={"Women on a field"} />
+            <picture>
+              <source
+                media={`(min-width: ${v.desktopWidth})`}
+                srcSet={WomenOnAFieldBigger}
+              />
+              <img src={WomenOnAField} alt={"Women on a field"} />
+            </picture>
             <CardAbsoluteText
               textAlign={"left"}
               alignItems={"start"}

@@ -11,7 +11,6 @@ const SwipeCardsList = ({ swipeCards }: IProps) => {
       {swipeCards.map((card, index) => (
         <li key={index}>{card}</li>
       ))}
-      <li />
     </CardsList>
   );
 };

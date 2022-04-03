@@ -2,7 +2,6 @@ import styled from "styled-components";
 import v from "../variables";
 
 export const FooterContainer = styled.div`
-  padding: 2em;
   font-size: 0.9em;
   background: #f7f7f7;
 `;
@@ -21,7 +20,7 @@ export const FooterSections = styled.ul`
     }
   }
 
-  @media (min-width: ${v.desktopExpandWith}) {
+  @media (min-width: ${v.desktopExpandWidth}) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -45,7 +44,7 @@ export const LinksList = styled.ul`
     margin-top: 0.5em;
   }
 
-  @media (min-width: ${v.desktopExpandWith}) {
+  @media (min-width: ${v.desktopExpandWidth}) {
     display: block;
   }
 `;
@@ -59,7 +58,7 @@ export const InlineLinks = styled.div`
 
 export const BottomSection = styled.li`
   width: 100%;
-  @media (min-width: ${v.desktopExpandWith}) {
+  @media (min-width: ${v.desktopExpandWidth}) {
     border-top: 1px solid rgba(212, 212, 212, 0.65);
   }
 `;

@@ -20,7 +20,7 @@ export const DefaultPaddingContainer = styled.div<{
       ${(props) => (props.paddingLeft ? "2.5rem" : "0")};
   }
 
-  @media (min-width: ${v.desktopExpandWith}) {
+  @media (min-width: ${v.desktopExpandWidth}) {
     padding: ${(props) => (props.paddingTop ? "1rem" : "0")}
       ${(props) => (props.paddingRight ? "5rem" : "0")}
       ${(props) => (props.paddingBottom ? "1rem" : "0")}
@@ -74,7 +74,7 @@ export const ClassicButton = styled.button`
   padding: 1em 1.5em;
   background: white;
   color: #c6017e;
-  font-size: 1em;
+  font-size: 0.95em;
   border-radius: 2em;
   border: none;
   outline: none;
@@ -96,7 +96,7 @@ export const MinimalisticButton = styled.button`
   border-radius: 0.5em;
   font-weight: bold;
   padding: 0.9em 1.4em;
-  font-size: 0.9em;
+  font-size: 1.05rem;
 `;
 
 export const BiggerHeader = styled.h1`

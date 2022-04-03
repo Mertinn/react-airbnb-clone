@@ -37,7 +37,11 @@ export const ExploreCardContainer = styled.div<{
     position: absolute;
     object-fit: cover;
   }
-  ${(props) => CardSizes[props.cardType]}
+  ${(props) => CardSizes[props.cardType]};
+
+  @media (min-width: ${v.desktopExpandWidth}) {
+    font-size: 1em;
+  }
 `;
 
 ExploreCardContainer.defaultProps = { roundedCorners: true };

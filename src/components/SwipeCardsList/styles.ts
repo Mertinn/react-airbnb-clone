@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import v from "../variables";
 
 export const CardsList = styled.ul`
   display: flex;
@@ -9,5 +10,9 @@ export const CardsList = styled.ul`
 
   li {
     scroll-snap-align: start;
+  }
+
+  @media (min-width: ${v.navbarMoveWidth}) {
+    overflow: visible;
   }
 `;
