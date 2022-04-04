@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { DefaultPaddingContainer } from "../globalStyles";
+import {
+  DefaultPaddingContainer,
+  DefaultWidthContainer,
+} from "../globalStyles";
 import {
   BottomSpacer,
   DesktopMenu,
@@ -34,26 +37,29 @@ const Navbar = () => {
   return (
     <>
       <NavbarContainer isScrolled={isScrolled}>
-        <DefaultPaddingContainer>
-          <SearchbarContainer>
-            <button>
-              <BiSearch size={"1.3em"} /> Dokąd chcesz pojechać?
-            </button>
-          </SearchbarContainer>
+        <DefaultWidthContainer>
+          <DefaultPaddingContainer>
+            <SearchbarContainer>
+              <button>
+                <BiSearch size={"1.3em"} /> Dokąd chcesz pojechać?
+              </button>
+            </SearchbarContainer>
 
-          <DesktopMenu>
-            <LogoContainer>
-              <AirbnbLogo />
-              <p>airbnb</p>
-            </LogoContainer>
-            <ExtendedSearchbar isExtended={!isScrolled} />
-            <NavbarSection>
-              <p>Zostań gospodarzem</p>
-              <ProfileIcon />
-            </NavbarSection>
-          </DesktopMenu>
-        </DefaultPaddingContainer>
+            <DesktopMenu>
+              <LogoContainer>
+                <AirbnbLogo />
+                <p>airbnb</p>
+              </LogoContainer>
+              <ExtendedSearchbar isExtended={!isScrolled} />
+              <NavbarSection>
+                <p>Zostań gospodarzem</p>
+                <ProfileIcon />
+              </NavbarSection>
+            </DesktopMenu>
+          </DefaultPaddingContainer>
+        </DefaultWidthContainer>
       </NavbarContainer>
+
       <BottomSpacer />
     </>
   );

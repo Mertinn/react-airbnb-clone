@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import v from "../../components/variables";
+import { DefaultPadding } from "../../components/mixins";
 
 export const CardsGrid = styled.div`
   display: grid;
@@ -10,8 +11,14 @@ export const CardsGrid = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     & > * {
-      font-size: 0.9em;
-      height: 54.5vw !important;
+      height: 50vw !important;
     }
+  }
+`;
+
+export const NoPaddingCardContainer = styled.div`
+  ${DefaultPadding(false, false, true, true)};
+  @media (min-width: 1400px) {
+    ${DefaultPadding(true, true, true, true)}
   }
 `;

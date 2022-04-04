@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import v from "./variables";
+import { DefaultPadding } from "./mixins";
 
 export const DefaultPaddingContainer = styled.div<{
   paddingRight?: boolean;
@@ -8,24 +8,13 @@ export const DefaultPaddingContainer = styled.div<{
   paddingBottom?: boolean;
 }>`
   width: 100%;
-  padding: ${(props) => (props.paddingTop ? "1rem" : "0")}
-    ${(props) => (props.paddingRight ? "1.5rem" : "0")}
-    ${(props) => (props.paddingBottom ? "1rem" : "0")}
-    ${(props) => (props.paddingLeft ? "1.5rem" : "0")};
-
-  @media (min-width: ${v.desktopWidth}) {
-    padding: ${(props) => (props.paddingTop ? "1rem" : "0")}
-      ${(props) => (props.paddingRight ? "2.5rem" : "0")}
-      ${(props) => (props.paddingBottom ? "1rem" : "0")}
-      ${(props) => (props.paddingLeft ? "2.5rem" : "0")};
-  }
-
-  @media (min-width: ${v.desktopExpandWidth}) {
-    padding: ${(props) => (props.paddingTop ? "1rem" : "0")}
-      ${(props) => (props.paddingRight ? "5rem" : "0")}
-      ${(props) => (props.paddingBottom ? "1rem" : "0")}
-      ${(props) => (props.paddingLeft ? "5rem" : "0")};
-  }
+  ${(props) =>
+    DefaultPadding(
+      props.paddingLeft!,
+      props.paddingRight!,
+      props.paddingTop!,
+      props.paddingBottom!
+    )};
 `;
 
 DefaultPaddingContainer.defaultProps = {
@@ -101,4 +90,13 @@ export const MinimalisticButton = styled.button`
 
 export const BiggerHeader = styled.h1`
   font-size: 2.5em;
+`;
+
+export const MediumHeader = styled.h1`
+  font-size: 1.9em;
+`;
+
+export const DefaultWidthContainer = styled.div`
+  max-width: 1800px;
+  margin: auto;
 `;

@@ -5,13 +5,13 @@ const CardSizes = {
   smallCard: css`
     height: 70vw;
     @media (min-width: ${v.desktopWidth}) {
-      height: 42vh;
+      height: min(30vw, 450px);
     }
   `,
   largeCard: css`
     height: 135vw;
     @media (min-width: ${v.desktopWidth}) {
-      height: 75vh;
+      height: 50vw;
     }
   `,
 };
@@ -25,7 +25,7 @@ export const ExploreCardContainer = styled.div<{
 }>`
   ${(props) => props.fill && "background:" + props.fill};
   color: white;
-  font-size: 0.8em;
+  font-size: 1.1em;
   border-radius: ${(props) => (props.roundedCorners ? "1em" : 0)};
   overflow: hidden;
   position: relative;
@@ -39,8 +39,16 @@ export const ExploreCardContainer = styled.div<{
   }
   ${(props) => CardSizes[props.cardType]};
 
+  @media (min-width: ${v.desktopWidth}) {
+    font-size: 1.2em;
+  }
+
   @media (min-width: ${v.desktopExpandWidth}) {
-    font-size: 1em;
+    font-size: 1.4em;
+  }
+
+  @media (min-width: ${v.desktopLastExpand}) {
+    font-size: 1.6em;
   }
 `;
 
@@ -50,7 +58,6 @@ export const CardAbsoluteText = styled.div<{
   justifyContent: string;
   alignItems: string;
   textAlign: string;
-  fontSize?: string;
   gap?: string;
 }>`
   position: relative;
@@ -59,18 +66,16 @@ export const CardAbsoluteText = styled.div<{
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  font-size: ${(props) => props.fontSize};
   justify-content: ${(props) => props.justifyContent};
   text-align: ${(props) => props.textAlign};
   align-items: ${(props) => props.alignItems};
   gap: ${(props) => props.gap};
 
-  @media (min-width: ${v.desktopWidth}) {
-    font-size: calc(0.2em + ${(props) => props.fontSize});
+  @media (min-width: ${v.desktopLastExpand}) {
+    padding: 4rem;
   }
 `;
 
 CardAbsoluteText.defaultProps = {
-  fontSize: "1em",
   gap: "2em",
 };

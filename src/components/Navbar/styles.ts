@@ -12,7 +12,7 @@ export const LogoContainer = styled.div`
     display: none;
   }
 
-  @media (min-width: 1130px) {
+  @media (min-width: ${v.desktopExpandWidth}) {
     p {
       display: flex;
     }
@@ -59,17 +59,9 @@ export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
     &,
     svg {
       ${(props) =>
-        props.isScrolled &&
-        css`
-          color: ${v.primaryRed};
-        `}
+        props.isScrolled ? `color: ${v.primaryRed}` : "color: white;"};
+      transition: ${v.navbarAnimationDuration};
     }
-  }
-
-  ${LogoContainer} {
-    ${(props) =>
-      props.isScrolled ? `color: ${v.primaryRed}` : "color: white;"};
-    transition: ${v.navbarAnimationDuration};
   }
 `;
 

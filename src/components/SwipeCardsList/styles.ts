@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import v from "../variables";
+import { DefaultPadding } from "../mixins";
 
 export const CardsList = styled.ul`
   display: flex;
@@ -14,5 +15,12 @@ export const CardsList = styled.ul`
 
   @media (min-width: ${v.navbarMoveWidth}) {
     overflow: visible;
+  }
+`;
+
+export const SwipeCardsListContainer = styled.div`
+  ${DefaultPadding(true, false, true, true)};
+  @media (min-width: ${v.navbarMoveWidth}) {
+    ${DefaultPadding(true, true, true, true)}
   }
 `;
