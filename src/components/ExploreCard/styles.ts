@@ -5,13 +5,15 @@ const CardSizes = {
   smallCard: css`
     height: 70vw;
     @media (min-width: ${v.desktopWidth}) {
-      height: min(30vw, 450px);
+      height: auto;
+      padding: 16% 0 16% 0;
     }
   `,
   largeCard: css`
     height: 135vw;
     @media (min-width: ${v.desktopWidth}) {
-      height: 50vw;
+      height: auto;
+      padding: 29% 0 29% 0;
     }
   `,
 };
@@ -27,6 +29,9 @@ export const ExploreCardContainer = styled.div<{
   color: white;
   font-size: 1.1em;
   border-radius: ${(props) => (props.roundedCorners ? "1em" : 0)};
+  @media (min-width: ${v.desktopLastExpand}) {
+    border-radius: 1em;
+  }
   overflow: hidden;
   position: relative;
 
@@ -35,6 +40,8 @@ export const ExploreCardContainer = styled.div<{
     height: 100%;
     position: absolute;
     object-fit: cover;
+    top: 0;
+    left: 0;
   }
   ${(props) => CardSizes[props.cardType]};
 
@@ -59,9 +66,11 @@ export const CardAbsoluteText = styled.div<{
   textAlign: string;
   gap?: string;
 }>`
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
   padding: 2rem;
   display: flex;
   flex-direction: column;

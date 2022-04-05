@@ -13,7 +13,7 @@ export const SearchbarContainer = styled.div<{ isShown: boolean }>`
   opacity: 1;
   transition: ${v.navbarAnimationDuration};
   margin-right: auto;
-  max-width: 400px;
+  max-width: 300px;
 
   ${(props) =>
     !props.isShown &&
