@@ -9,6 +9,7 @@ export const InputContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  max-width: 900px;
 
   @media (min-width: ${v.navbarMoveWidth}) {
     width: 80%;

@@ -15,6 +15,9 @@ export const CardsList = styled.ul`
 
   @media (min-width: ${v.navbarMoveWidth}) {
     overflow: visible;
+    li {
+      flex: 1 1 0;
+    }
   }
 `;
 

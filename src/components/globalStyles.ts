@@ -97,6 +97,6 @@ export const MediumHeader = styled.h1`
 `;
 
 export const DefaultWidthContainer = styled.div`
-  max-width: 1800px;
+  max-width: 1750px;
   margin: auto;
 `;

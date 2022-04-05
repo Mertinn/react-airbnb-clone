@@ -29,7 +29,6 @@ export const ExploreCardContainer = styled.div<{
   border-radius: ${(props) => (props.roundedCorners ? "1em" : 0)};
   overflow: hidden;
   position: relative;
-  height: 100%;
 
   img {
     width: 100%;
