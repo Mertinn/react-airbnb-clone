@@ -27,7 +27,7 @@ export const ExploreCardContainer = styled.div<{
 }>`
   ${(props) => props.fill && "background:" + props.fill};
   color: white;
-  font-size: 1.1em;
+  font-size: 1em;
   border-radius: ${(props) => (props.roundedCorners ? "1em" : 0)};
   @media (min-width: ${v.desktopLastExpand}) {
     border-radius: 1em;
@@ -43,8 +43,9 @@ export const ExploreCardContainer = styled.div<{
     top: 0;
     left: 0;
   }
-  ${(props) => CardSizes[props.cardType]};
-
+  @media (min-width: 360px) {
+    font-size: 1.1em;
+  }
   @media (min-width: ${v.desktopWidth}) {
     font-size: 1.2em;
   }
@@ -56,6 +57,7 @@ export const ExploreCardContainer = styled.div<{
   @media (min-width: ${v.desktopLastExpand}) {
     font-size: 1.6em;
   }
+  ${(props) => CardSizes[props.cardType]};
 `;
 
 ExploreCardContainer.defaultProps = { roundedCorners: true };

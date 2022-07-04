@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   BottomSection,
   FooterContainer,
@@ -19,22 +18,22 @@ const Footer = () => {
             <SectionHeader>Obsługa klienta</SectionHeader>
             <LinksList>
               <li>
-                <Link to={"#"}>Centrum pomocy</Link>
+                <a href={"/#"}>Centrum pomocy</a>
               </li>
               <li>
-                <Link to={"#"}>Informacje dotyczące bezpieczeństwa</Link>
+                <a href={"/#"}>Informacje dotyczące bezpieczeństwa</a>
               </li>
               <li>
-                <Link to={"#"}>Opcje anulowania</Link>
+                <a href={"/#"}>Opcje anulowania</a>
               </li>
               <li>
-                <Link to={"#"}>Zgłoś problem</Link>
+                <a href={"/#"}>Zgłoś problem</a>
               </li>
               <li>
-                <Link to={"#"}>Wsparcie dla osób z niepełnosprawnościami</Link>
+                <a href={"/#"}>Wsparcie dla osób z niepełnosprawnościami</a>
               </li>
               <li>
-                <Link to={"#"}>Zgłoś problem dotyczący Twojej okolicy</Link>
+                <a href={"/#"}>Zgłoś problem dotyczący Twojej okolicy</a>
               </li>
             </LinksList>
           </li>
@@ -42,13 +41,13 @@ const Footer = () => {
             <SectionHeader>Społeczność</SectionHeader>
             <LinksList>
               <li>
-                <Link to={"#"}>Zacznij przyjmować gości</Link>
+                <a href={"/#"}>Zacznij przyjmować gości</a>
               </li>
               <li>
-                <Link to={"#"}>Odwiedź forum społeczności</Link>
+                <a href={"/#"}>Odwiedź forum społeczności</a>
               </li>
               <li>
-                <Link to={"#"}>Jak przyjmować gości odpowiedzialnie</Link>
+                <a href={"/#"}>Jak przyjmować gości odpowiedzialnie</a>
               </li>
             </LinksList>
           </li>
@@ -56,29 +55,29 @@ const Footer = () => {
             <SectionHeader>Informacje</SectionHeader>
             <LinksList>
               <li>
-                <Link to={"#"}>Wiadomości</Link>
+                <a href={"/#"}>Wiadomości</a>
               </li>
               <li>
-                <Link to={"#"}>Poznaj nowe funkcje</Link>
+                <a href={"/#"}>Poznaj nowe funkcje</a>
               </li>
               <li>
-                <Link to={"#"}>Praca</Link>
+                <a href={"/#"}>Praca</a>
               </li>
               <li>
-                <Link to={"#"}>Dla inwestorów</Link>
+                <a href={"/#"}>Dla inwestorów</a>
               </li>
             </LinksList>
           </li>
           <BottomSection>
             <p>© 2022 Airbnb, Inc.</p>
             <InlineLinks>
-              <Link to={"#"}>Prywatność</Link>
+              <a href={"/#"}>Prywatność</a>
               <span>·</span>
-              <Link to={"#"}>Warunki</Link>
+              <a href={"/#"}>Warunki</a>
               <span>·</span>
-              <Link to={"#"}>Mapa witryny</Link>
+              <a href={"/#"}>Mapa witryny</a>
               <span>·</span>
-              <Link to={"#"}>Informacje o firmie</Link>
+              <a href={"/#"}>Informacje o firmie</a>
             </InlineLinks>
           </BottomSection>
         </FooterSections>

@@ -1,5 +1,4 @@
 import React from "react";
-import { DefaultPaddingContainer } from "../globalStyles";
 import { CardsSizesTypes, ExploreCardContainer } from "./styles";
 
 interface IProps {
